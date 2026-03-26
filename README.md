@@ -295,3 +295,7 @@ Performance Comparison
 | Decision Tree       | 0.82     | 0.80      | 0.79   | 0.79     |
 | Random Forest       | 0.86     | 0.85      | 0.84   | 0.84     |
 
+## AUTHOR 
+**NAME-** RISHI SHARMA
+
+**REG. NO.-** 25BAI11009
