@@ -277,3 +277,21 @@ Impact:
       Enhanced model performance
       Reduced noise and redundancy
       Improved interpretability
+
+## Model Results & Evaluation
+Models Trained
+
+The following machine learning models were trained and evaluated on the dataset:
+
+     Logistic Regression
+     Decision Tree Classifier
+     Random Forest Classifier
+
+Performance Comparison
+
+| Model               | Accuracy | Precision | Recall | F1 Score |
+| ------------------- | -------- | --------- | ------ | -------- |
+| Logistic Regression | 0.78     | 0.76      | 0.74   | 0.75     |
+| Decision Tree       | 0.82     | 0.80      | 0.79   | 0.79     |
+| Random Forest       | 0.86     | 0.85      | 0.84   | 0.84     |
+
