@@ -164,4 +164,116 @@ Helps in:
      Credit Score ↔ Loan Approval
      Financial indicators ↔ each other
 
-  
+## Encoding Categorical Variables
+
+Machine learning models require numerical input, so categorical features were converted into numeric form.
+
+Techniques used:
+     
+     Label Encoding:
+ 
+                Applied to ordinal variables like Education_Level
+                Also used for target variable Loan_Approved (Yes → 1, No → 0)
+ 
+     One-Hot Encoding:
+
+        Applied to nominal variables such as:
+ 
+                                           Employment Status
+                                           Marital Status
+                                           Loan Purpose
+ 
+     Used drop="first" to avoid the dummy variable trap
+
+Outcome:
+     
+     All categorical features transformed into model-friendly numerical format
+
+## Correlation Heatmap
+
+A heatmap was plotted to visualize correlation between numerical features.
+
+Purpose:
+
+      Identify relationships between variables
+      Detect multicollinearity
+
+Key Insights:
+ 
+       Credit_Score shows strong positive correlation with Loan_Approved
+       DTI_Ratio shows negative correlation with approval
+       Financial features (Income, Savings) show moderate relationships
+
+Impact:
+ 
+      Helps in selecting important features for model training
+## Train-Test Split
+
+Dataset split into:
+       
+       Training Set (80%)
+       Testing Set (20%)
+       Done using train_test_split from sklearn
+
+Purpose:
+
+       Training set → used to train models
+       Testing set → used to evaluate performance on unseen data
+       Ensures model generalization and prevents overfitting
+## Feature Scaling
+
+Numerical features were scaled to ensure uniform range
+
+Technique used:
+
+            Standardization (StandardScaler)
+
+Why scaling is important:
+
+             Prevents features with large values (e.g., income) from dominating
+             Improves performance of distance-based models like:
+                                                Logistic Regression
+                                                KNN
+
+Outcome:
+
+       Features transformed to have mean = 0 and standard deviation = 1
+
+## Model Training & Evaluation
+
+Multiple machine learning models were trained on the processed dataset
+
+Models Used:
+
+     Logistic Regression
+     Decision Tree
+     Random Forest (if included in your notebook)
+
+Evaluation Metrics:
+
+               Accuracy Score
+               
+Insights:
+    
+    Compared model performances to identify the best-performing algorithm
+    free-based models generally handle non-linearity better
+    Logistic Regression provides interpretability
+
+## Feature Engineering
+
+Improved dataset quality by creating and refining features
+
+Steps performed:
+
+      Removed irrelevant column:
+
+                Applicant_ID (no predictive value)
+                Handled missing values
+                Encoded categorical features
+                Created a clean, structured dataset for modeling
+
+Impact:
+     
+      Enhanced model performance
+      Reduced noise and redundancy
+      Improved interpretability
