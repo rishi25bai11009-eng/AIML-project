@@ -44,3 +44,124 @@ You are hired as a Machine Learning Engineer before final to design and develop 
 
 The dataset used in this project is a synthetic dataset created and modified for educational purposes to simulate real-world loan approval scenarios.
 The dataset is included in this repository as loan_approval_data.csv.
+
+## Exploratory Data Analysis (EDA)
+
+1. Loan Approval Distribution (Pie Chart)
+
+A pie chart is used to visualize the distribution of Loan Approved (Yes/No).
+
+Insight:
+
+Helps identify whether the dataset is balanced or imbalanced.
+
+If one class dominates, the model may become biased toward that class.
+
+🔹 2. Education Level Distribution (Bar Plot)
+
+A bar plot shows counts of different Education Levels.
+
+Insight:
+
+      Reveals the most common education category among applicants.
+      
+      Helps understand whether education plays a role in loan approval (to be validated later).
+
+🔹 3. Applicant Income Distribution (Histogram)
+
+Histogram plotted for Applicant_Income.
+
+Insight:
+
+       Data is right-skewed (few applicants with very high income).
+
+       Majority of applicants fall in a lower to mid income range.
+
+Indicates possible outliers.
+
+🔹 4. Coapplicant Income Distribution (Histogram)
+
+Histogram for Coapplicant_Income.
+
+Insight:
+
+     Many values are zero or low, meaning many applicants may not have coapplicants.
+
+     Distribution is also skewed.
+
+🔹 5. Applicant Income vs Loan Approval (Boxplot)
+
+Boxplot comparing income across loan approval status.
+
+Insight:
+       
+       Approved applicants tend to have slightly higher median income.
+       Presence of outliers in both approved and rejected groups.
+
+🔹 6. Multiple Financial Features vs Loan Approval (Boxplots Grid)
+
+Features analyzed:
+
+Applicant Income
+
+Credit Score
+
+DTI Ratio
+
+Savings
+
+Insights:
+
+Credit Score:
+
+          Strong separation → higher scores → more approvals ✅
+
+Ratio (Debt-to-Income):
+
+         Lower DTI → higher approval chances ✅
+
+Savings:
+
+       Higher savings correlate with loan approval
+
+Applicant Income:
+  
+                Influence exists but not as strong as credit score
+
+🔹 7. Credit Score vs Loan Approval (Histogram with Hue)
+
+Histogram with Loan_Approved as hue.
+
+Insight:
+    
+      Clear pattern:
+             Higher credit score → mostly approved
+             Lower credit score → mostly rejected
+Strongest predictor in dataset
+
+🔹 8. Applicant Income vs Loan Approval (Histogram with Hue)
+
+Histogram comparing income distribution for approved vs rejected loans.
+
+Insight:
+      
+        Overlap exists between approved and rejected groups
+        income alone is not sufficient to decide approval
+        Works better combined with other features
+
+🔹 9. Correlation Heatmap
+
+Heatmap showing correlation between numerical features.
+
+Insight:
+
+     Identifies relationships between variables
+Helps in:
+
+     Feature selection
+     Detecting multicollinearity
+     Likely strong correlations:
+     Credit Score ↔ Loan Approval
+     Financial indicators ↔ each other
+
+  
